@@ -6,13 +6,13 @@ const reminders=require('./model/reminders')
 const  mongoose=require('mongoose')
 
 const app = express();
-const port = 3000;
+
 
 app.use(bodyParser.json());
 app.use(express.urlencoded({extended:true}));   
 mongoose.connect( 'mongodb+srv://ragulNolan:%23Ragul4444@cluster0.6qh9t.mongodb.net/mailReminder?retryWrites=true&w=majority',{useNewUrlParser: true,useUnifiedTopology: true})
     .then((res)=>{
-        app.listen(port, () => {
+        app.listen(process.env.PORT ||3000, () => {
             console.log(`Server is running on http://localhost:${port}`);
           });
   
