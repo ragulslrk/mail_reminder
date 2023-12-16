@@ -31,9 +31,9 @@ app.post('/schedule-email', async(req, res) => {
   const { to, subject, text, date_time, time_zone_id } = req.body;
   console.log(to, subject, text, date_time, time_zone_id)
 
-  // if (!date_time || !date_time.match(/\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}/)) {
-  //   return res.status(400).send('Invalid date_time format or missing date_time');
-  // }
+    // if (!date_time || !date_time.match(/\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}/)) {
+    //   return res.status(400).send('Invalid date_time format or missing date_time');
+    // }
 
 //   const [year, month, day, hour, minute] = date_time.split(/[-T:]/);
 //   const cronSyntax = `${minute} ${hour} ${day} ${month} *`; // Use '*' for the day of the month
